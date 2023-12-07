@@ -1,0 +1,74 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:ics.py - http://git.io/lLljaA
+BEGIN:VEVENT
+DTEND:20231215T170000Z
+DTSTART:20231201T090000Z
+SUMMARY:Door Decorating
+UID:cf42dc7c-c476-4c80-8bf4-fb35cbeddbec@cf42.org
+URL:https://artsandscience.usask.ca/biology/news/articles/9045/Door_Decorating
+END:VEVENT
+BEGIN:VEVENT
+DTEND:20231222T170000Z
+DTSTART:20231206T090000Z
+SUMMARY:Tree Decorating
+UID:b045e4ac-cba8-4b1e-ba46-753de4337bc4@b045.org
+URL:https://artsandscience.usask.ca/biology/news/articles/9043/Tree_Decorating
+END:VEVENT
+BEGIN:VEVENT
+DURATION:PT1H
+DTSTART:20231220T090000Z
+SUMMARY:Coffee in the Break Room
+UID:e2977e46-6617-478c-b047-98526629c5bc@e297.org
+URL:https://artsandscience.usask.ca/biology/news/articles/9053/Coffee_in_the_Break_Room
+END:VEVENT
+BEGIN:VEVENT
+DTEND:20231206T160000Z
+DTSTART:20231206T080000Z
+SUMMARY:RO\, VAC\, and Compressed Air Shutdown
+UID:02adfc54-0a69-4b8a-a0d9-9e59e4a64c89@02ad.org
+URL:https://artsandscience.usask.ca/biology/news/articles/9050/RO_VAC_and_Compressed_Air_Shutdown
+END:VEVENT
+BEGIN:VEVENT
+DURATION:PT3H
+DTSTART:20231219T133000Z
+SUMMARY:Faryal Hamza MSc thesis defence
+UID:a9249dfc-1e49-4bbb-bab0-a7c663bb5045@a924.org
+URL:https://artsandscience.usask.ca/biology/news/articles/9052/Faryal_Hamza_MSc_thesis_defence
+END:VEVENT
+BEGIN:VEVENT
+DTEND:20231206T150000Z
+DTSTART:20231206T130000Z
+SUMMARY:Normal Power Shutdown
+UID:fe0ddb1c-feed-49e1-8645-baa4f3780ebe@fe0d.org
+URL:https://artsandscience.usask.ca/biology/news/articles/9048/Normal_Power_Shutdown
+END:VEVENT
+BEGIN:VEVENT
+DURATION:PT1H
+DTSTART:20231207T114500Z
+SUMMARY:Dr. Laura Pio 990 Seminar: Origin and Evolution of Marine Larvae
+UID:c8259f9e-0158-4a17-8595-aa555799e737@c825.org
+URL:https://artsandscience.usask.ca/biology/news/articles/9090/Dr_Laura_Pio_990_Seminar_Origin_and_Evolution_of_Marine_Larv
+END:VEVENT
+BEGIN:VEVENT
+DTEND:20231206T110000Z
+DTSTART:20231206T090000Z
+SUMMARY:Emergency Power Shutdown
+UID:3fc36674-b9d0-4ca5-a154-b514e24a0938@3fc3.org
+URL:https://artsandscience.usask.ca/biology/news/articles/9049/Emergency_Power_Shutdown
+END:VEVENT
+BEGIN:VEVENT
+DURATION:PT3H
+DTSTART:20231212T113000Z
+SUMMARY:Vladimir Kodzhahinchev PhD thesis defence
+UID:ee0247e9-39e2-4f3f-b848-ee4b1146c67c@ee02.org
+URL:https://artsandscience.usask.ca/biology/news/articles/9051/Vladimir_Kodzhahinchev_PhD_thesis_defence
+END:VEVENT
+BEGIN:VEVENT
+DTEND:20231215T170000Z
+DTSTART:20231201T090000Z
+SUMMARY:Find Frosty
+UID:2978813d-3a0a-4ae7-937e-b495da2672b5@2978.org
+URL:https://artsandscience.usask.ca/biology/news/articles/9044/Find_Frosty
+END:VEVENT
+END:VCALENDAR

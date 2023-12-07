@@ -3,6 +3,7 @@ import requests
 import json
 import re
 import time
+import arrow
 from ics import Calendar, Event
 from bs4 import BeautifulSoup
 
@@ -195,7 +196,7 @@ def get_all_events(soup):
         end_date='None'
         event_name=tag.h3.string
         event_page=tag.a['href']
-        event_URL="https://artsandscience.usask.ca"+event_page
+        event_URL="https://artsandscience.usask.ca"+str(event_page)
         print("Event: ", event_name)
         # print(tag.a['href'])
         event_time=get_time(event_page)
@@ -251,53 +252,58 @@ def get_all_events(soup):
             if end_date!='None':
                 start=start_date+" 09:00:00"
                 end = end_date+ " 17:00:00"
-                make_event_two_dates(e,c,event_name,event_page,start,end)
+                make_event_two_dates(e,c,event_name,event_URL,start,end)
             else:
                 if event_filter_status!='None':
                     if event_filter_status=='990':
                         start=start_date+' 11:45:00'
                         duration=1
-                        make_event_duration(e,c,event_name,event_page,start,duration)
+                        make_event_duration(e,c,event_name,event_URL,start,duration)
                 else:
                     start=start_date+" 09:00:00"
                     end = start_date+ " 17:00:00"
-                    make_event_two_dates(e,c,event_name,event_page,start,end)
+                    make_event_two_dates(e,c,event_name,event_URL,start,end)
         else:
             if end_date=='None':
                 if event_time[1]!='None':
                     start=start_date+" "+event_time[0]
                     end = start_date+" "+event_time[1]
-                    make_event_two_dates(e,c,event_name,event_page,start,end)
+                    make_event_two_dates(e,c,event_name,event_URL,start,end)
                 else:
                     if event_filter_status!='None':
                         if event_filter_status=='990':
                             start=start_date+" "+event_time[0]
                             duration=1
-                            make_event_duration(e,c,event_name,event_page,start,duration)
+                            make_event_duration(e,c,event_name,event_URL,start,duration)
                         elif event_filter_status=='Def':
                             start=start_date+" "+event_time[0]
                             duration=3
-                            make_event_duration(e,c,event_name,event_page,start,duration)
+                            make_event_duration(e,c,event_name,event_URL,start,duration)
                         else:
                             print("BAD EVENT FILTER!!")
                             start=start_date+" 09:00:00"
                             duration=1
-                            make_event_duration(e,c,event_name,event_page,start,duration)
+                            make_event_duration(e,c,event_name,event_URL,start,duration)
                     else:
                         start=start_date+" 09:00:00"
                         duration=1
-                        make_event_duration(e,c,event_name,event_page,start,duration)
+                        make_event_duration(e,c,event_name,event_URL,start,duration)
             else:
                 if event_time[1]!='None':
                     start=start_date+" "+event_time[0]
                     end=end_date+" "+event_time[1]
-                    make_event_two_dates(e,c,event_name,event_page,start,end)
+                    make_event_two_dates(e,c,event_name,event_URL,start,end)
                 else:
                     start=start_date+" "+event_time[0]
                     end=end_date+" 17:00:00"
-                    make_event_two_dates(e,c,event_name,event_page,start,end)
+                    make_event_two_dates(e,c,event_name,event_URL,start,end)
 
 def make_event_two_dates(ev,cal,name,url,start,end):
+    start=arrow.get(start, 'YYYY-MM-DD HH:mm:ss')
+    start.replace(tzinfo='Canada/Saskatchewan')
+    end=arrow.get(end, 'YYYY-MM-DD HH:mm:ss')
+    end.replace(tzinfo='Canada/Saskatchewan')
+    print(start)
     ev.name=name
     ev.begin=start
     ev.end=end
@@ -305,6 +311,8 @@ def make_event_two_dates(ev,cal,name,url,start,end):
     cal.events.add(ev)
     print("Name: ",name,"Start: ",start,"End: ", end)
 def make_event_duration(ev,cal,name,url,start,duration):
+    start=arrow.get(start, 'YYYY-MM-DD HH:mm:ss')
+    start.replace(tzinfo='Canada/Saskatchewan')
     ending={"hours":duration}
     ev.name=name
     ev.begin=start
@@ -316,7 +324,7 @@ def make_event_duration(ev,cal,name,url,start,duration):
     
 def make_cal(cal):
     cal.events
-    with open('biology_cal.ics','w') as f:
+    with open('utc_notimezone_cal.ics','w') as f:
         f.writelines(c.serialize_iter())
     cal.serialize()
 def main():
@@ -330,6 +338,16 @@ def main():
     get_all_events(soup)
     print(c.events)
     make_cal(c)
-
+        #input file to fix the fucking time zones
+    calendrier = open("utc_notimezone_cal.ics", "rt")
+#output file to write the result to
+    cal = open("bio_cal.ics", "wt")
+#for each line in the input file
+    for line in calendrier:
+        #read replace the string and write to output file
+        cal.write(line.replace('Z', ''))
+#close input and output files
+    calendrier.close()
+    cal.close()
 if __name__ == "__main__":
     main()
