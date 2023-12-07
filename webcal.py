@@ -130,7 +130,7 @@ def process_event_name(name_string, event_filter_status):
     return_filter='None'
     if name_string.find("thesis")!=-1:
         return_filter='Def'
-    if name_string.find("990 Seminar")!=-1:
+    if name_string.find("Seminar")!=-1:
         return_filter='990'
     print(return_filter)
     return return_filter
@@ -175,9 +175,9 @@ def get_all_events(soup):
     results=soup.find_all("h2")
     # print(results)
     # print("For the first result:\n")
-    todays_events=results[0]
-    ongoing_events=results[1]
-    upcoming_events=results[2]
+    # todays_events=results[0]
+    # ongoing_events=results[1]
+    # upcoming_events=results[2]
 
     # all_p=all_events.find_all("p")
     # print(todays_events.parent.prettify())
@@ -307,6 +307,7 @@ def make_event_two_dates(ev,cal,name,url,start,end):
     ev.name=name
     ev.begin=start
     ev.end=end
+    ev.last_modified=arrow.now('Canada/Saskatchewan')
     ev.url=url
     cal.events.add(ev)
     print("Name: ",name,"Start: ",start,"End: ", end)
@@ -317,37 +318,57 @@ def make_event_duration(ev,cal,name,url,start,duration):
     ev.name=name
     ev.begin=start
     ev.duration=ending
+    ev.last_modified=arrow.now('Canada/Saskatchewan')
     ev.url=url
     cal.events.add(ev)
     print("Duration", duration)
     # print(cal.events)
-    
+def generate_update_cal(old_file,new_file):       
+    old_cal = open(old_file, "rt")
+    new_cal = open(new_file, "rt")
+    add_cal = open("cal_updates.ics",'wt')
+    for line1 in new_cal:
+        for line2 in old_cal:
+            if line1.strip("\n")!=line2:
+                add_cal.write(line1)
+    old_cal.close()
+    new_cal.close()
+    add_cal.close()
+
+# #close input and output files
+#     calendrier.close()
+#     cal.close()
+def get_events_from_many_months():
+    URL_start="https://artsandscience.usask.ca/biology/news/events.php"
+    URL_list=['','?d=2024-01-01','?d=2024-02-01', '?d=2024-03-01', '?d=2024-04-01', '?d=2024-05-01', '?d=2024-06-01', '?d=2024-07-01']
+    for url in range(len(URL_list)):
+        URL=URL_start+URL_list[url]
+        print(url)
+        page=requests.get(URL)
+        # print(page.text)
+
+        soup= BeautifulSoup(page.content,"lxml")
+        # print(soup.prettify)
+        # print(data_soup)
+        i=0
+        get_all_events(soup)
 def make_cal(cal):
     cal.events
     with open('utc_notimezone_cal.ics','w') as f:
         f.writelines(c.serialize_iter())
     cal.serialize()
-def main():
-    URL="https://artsandscience.usask.ca/biology/news/events.php"
-    page=requests.get(URL)
-    # print(page.text)
-    soup= BeautifulSoup(page.content,"lxml")
-    # print(soup.prettify)
-    # print(data_soup)
-    i=0
-    get_all_events(soup)
-    print(c.events)
-    make_cal(c)
-        #input file to fix the fucking time zones
+    #input file to fix the fucking time zones
     calendrier = open("utc_notimezone_cal.ics", "rt")
-#output file to write the result to
-    cal = open("bio_cal.ics", "wt")
-#for each line in the input file
+    #output file to write the result to
+    cal = open("bio_cal_v2.ics", "wt")
+    #for each line in the input file
     for line in calendrier:
-        #read replace the string and write to output file
-        cal.write(line.replace('Z', ''))
-#close input and output files
+            cal.write(line.replace('Z', ''))
     calendrier.close()
     cal.close()
+def main():
+    get_events_from_many_months()
+    print(c.events)
+    make_cal(c)
 if __name__ == "__main__":
     main()

@@ -1,0 +1,164 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:ics.py - http://git.io/lLljaA
+BEGIN:VEVENT
+DURATION:PT1H
+LAST-MODIFIED:20231207T155514
+DTSTART:20240417T090000
+SUMMARY:Coffee in the Break Room
+UID:86365ad5-6a8f-46e6-8176-045021878717@8636.org
+URL:https://artsandscience.usask.ca/biology/news/articles/9059/Coffee_in_the_Break_Room
+END:VEVENT
+BEGIN:VEVENT
+DURATION:PT1H
+LAST-MODIFIED:20231207T155514
+DTSTART:20240320T090000
+SUMMARY:Coffee in the Break Room
+UID:602e6dac-2689-42d2-a376-44cebed206b1@602e.org
+URL:https://artsandscience.usask.ca/biology/news/articles/9058/Coffee_in_the_Break_Room
+END:VEVENT
+BEGIN:VEVENT
+DTEND:20231222T170000
+LAST-MODIFIED:20231207T155512
+DTSTART:20231206T090000
+SUMMARY:Tree Decorating
+UID:ecdcf864-d610-4af4-afa9-17bd98d7b466@ecdc.org
+URL:https://artsandscience.usask.ca/biology/news/articles/9043/Tree_Decorating
+END:VEVENT
+BEGIN:VEVENT
+DURATION:PT1H
+LAST-MODIFIED:20231207T155513
+DTSTART:20240307T114500
+SUMMARY:Dr. Simon Gilroy Seminar
+UID:2bf5333f-2002-4b8e-92e9-ec65f6f60287@2bf5.org
+URL:https://artsandscience.usask.ca/biology/news/articles/9096/Dr_Simon_Gilroy_Seminar
+END:VEVENT
+BEGIN:VEVENT
+DURATION:PT1H
+LAST-MODIFIED:20231207T155514
+DTSTART:20240321T114500
+SUMMARY:Alec Schindler Seminar
+UID:98cc0828-2994-4d42-9063-95a290306bab@98cc.org
+URL:https://artsandscience.usask.ca/biology/news/articles/9097/Alec_Schindler_Seminar
+END:VEVENT
+BEGIN:VEVENT
+DURATION:PT1H
+LAST-MODIFIED:20231207T155513
+DTSTART:20240222T114500
+SUMMARY:Priya Verma Seminar
+UID:d3ff4255-80ab-43e2-a934-f8ca44f59eba@d3ff.org
+URL:https://artsandscience.usask.ca/biology/news/articles/9094/Priya_Verma_Seminar
+END:VEVENT
+BEGIN:VEVENT
+DTEND:20231215T170000
+LAST-MODIFIED:20231207T155512
+DTSTART:20231201T090000
+SUMMARY:Door Decorating
+UID:40dd2993-7d90-4759-ab54-e8e5450ea4f6@40dd.org
+URL:https://artsandscience.usask.ca/biology/news/articles/9045/Door_Decorating
+END:VEVENT
+BEGIN:VEVENT
+DURATION:PT3H
+LAST-MODIFIED:20231207T155512
+DTSTART:20231219T133000
+SUMMARY:Faryal Hamza MSc thesis defence
+UID:0a18a02f-f7c9-477a-af1e-c6c0eb812d62@0a18.org
+URL:https://artsandscience.usask.ca/biology/news/articles/9052/Faryal_Hamza_MSc_thesis_defence
+END:VEVENT
+BEGIN:VEVENT
+DURATION:PT1H
+LAST-MODIFIED:20231207T155513
+DTSTART:20240125T114500
+SUMMARY:Dr. Sarah Wood Seminar
+UID:1d2e9b43-b30e-4895-a207-33254737539e@1d2e.org
+URL:https://artsandscience.usask.ca/biology/news/articles/9092/Dr_Sarah_Wood_Seminar
+END:VEVENT
+BEGIN:VEVENT
+DTEND:20231215T170000
+LAST-MODIFIED:20231207T155512
+DTSTART:20231201T090000
+SUMMARY:Find Frosty
+UID:49cd2f87-ad3e-43e0-abfa-cd5eb19946a5@49cd.org
+URL:https://artsandscience.usask.ca/biology/news/articles/9044/Find_Frosty
+END:VEVENT
+BEGIN:VEVENT
+DURATION:PT1H
+LAST-MODIFIED:20231207T155513
+DTSTART:20240117T090000
+SUMMARY:Coffee in the Break Room
+UID:ec6c2e5e-a30f-4f8f-8270-9ec156510634@ec6c.org
+URL:https://artsandscience.usask.ca/biology/news/articles/9056/Coffee_in_the_Break_Room
+END:VEVENT
+BEGIN:VEVENT
+DURATION:PT1H
+LAST-MODIFIED:20231207T155513
+DTSTART:20240111T114500
+SUMMARY:Ashlyn Kirk Seminar
+UID:e28a1252-a3a5-4e8a-b734-fa4d10b158d0@e28a.org
+URL:https://artsandscience.usask.ca/biology/news/articles/9091/Ashlyn_Kirk_Seminar
+END:VEVENT
+BEGIN:VEVENT
+DURATION:PT1H
+LAST-MODIFIED:20231207T155513
+DTSTART:20240221T090000
+SUMMARY:Coffee in the Break Room
+UID:470edce1-c456-4bcc-a35b-1c1c5a662bff@470e.org
+URL:https://artsandscience.usask.ca/biology/news/articles/9057/Coffee_in_the_Break_Room
+END:VEVENT
+BEGIN:VEVENT
+DURATION:PT1H
+LAST-MODIFIED:20231207T155513
+DTSTART:20240229T114500
+SUMMARY:Aaron Bell Seminar
+UID:260ab5a0-a55f-47e3-adb5-8c8f5fd6a3a2@260a.org
+URL:https://artsandscience.usask.ca/biology/news/articles/9095/Aaron_Bell_Seminar
+END:VEVENT
+BEGIN:VEVENT
+DURATION:PT3H
+LAST-MODIFIED:20231207T155512
+DTSTART:20231212T113000
+SUMMARY:Vladimir Kodzhahinchev PhD thesis defence
+UID:f6dfefd5-9fc2-40ff-963b-c329d85b28b0@f6df.org
+URL:https://artsandscience.usask.ca/biology/news/articles/9051/Vladimir_Kodzhahinchev_PhD_thesis_defence
+END:VEVENT
+BEGIN:VEVENT
+DURATION:PT1H
+LAST-MODIFIED:20231207T155512
+DTSTART:20231207T114500
+SUMMARY:Dr. Laura Pio 990 Seminar: Origin and Evolution of Marine Larvae
+UID:ceffb865-73fe-4448-8fb5-4cf7965de324@ceff.org
+URL:https://artsandscience.usask.ca/biology/news/articles/9090/Dr_Laura_Pio_990_Seminar_Origin_and_Evolution_of_Marine_Larv
+END:VEVENT
+BEGIN:VEVENT
+DURATION:PT1H
+LAST-MODIFIED:20231207T155512
+DTSTART:20231220T090000
+SUMMARY:Coffee in the Break Room
+UID:7d5d8c25-8840-4e1a-aa97-9d2dba39ce7f@7d5d.org
+URL:https://artsandscience.usask.ca/biology/news/articles/9053/Coffee_in_the_Break_Room
+END:VEVENT
+BEGIN:VEVENT
+DURATION:PT1H
+LAST-MODIFIED:20231207T155514
+DTSTART:20240515T090000
+SUMMARY:Coffee in the Break Room
+UID:74ee4b7f-d724-4f8e-8a93-dcbeb6f9ed4a@74ee.org
+URL:https://artsandscience.usask.ca/biology/news/articles/9060/Coffee_in_the_Break_Room
+END:VEVENT
+BEGIN:VEVENT
+DURATION:PT1H
+LAST-MODIFIED:20231207T155514
+DTSTART:20240619T090000
+SUMMARY:Coffee in the Break Room
+UID:53b72ae8-53e7-43c3-abf0-3c1226338564@53b7.org
+URL:https://artsandscience.usask.ca/biology/news/articles/9061/Coffee_in_the_Break_Room
+END:VEVENT
+BEGIN:VEVENT
+DTEND:20240201T170000
+LAST-MODIFIED:20231207T155513
+DTSTART:20240201T090000
+SUMMARY:Dr. Dominique Roche seminar
+UID:1dfb5117-5efa-4452-b420-7d67639e51fb@1dfb.org
+URL:https://artsandscience.usask.ca/biology/news/articles/9093/Dr_Dominique_Roche_seminar
+END:VEVENT
+END:VCALENDAR
