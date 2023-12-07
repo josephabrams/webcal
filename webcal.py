@@ -326,7 +326,7 @@ def make_event_duration(ev,cal,name,url,start,duration):
 def generate_update_cal(old_file,new_file):       
     old_cal = open(old_file, "rt")
     new_cal = open(new_file, "rt")
-    add_cal = open("cal_updates.ics",'wt')
+    add_cal = open("biol_cal_updates.ics",'wt')
     for line1 in new_cal:
         for line2 in old_cal:
             if line1.strip("\n")!=line2:
